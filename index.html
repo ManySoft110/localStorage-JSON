@@ -30,8 +30,9 @@
 function localS() {
 
     // const id = document.getElementById('id').value;
+    // const id = Math.floor(Math.random() * 100000);
     const id = Date.now();
-    //const id = Math.floor(Math.random() * 100000);
+    
     const fname = document.getElementById('fname').value;
     const lname = document.getElementById('lname').value;
     const ph = document.getElementById('phone').value;
@@ -41,12 +42,12 @@ function localS() {
         lname:lname,
         ph:ph
     };
-    
     window.localStorage.setItem(id, JSON.stringify(user));
     // to save in in the L.S in json
     // localStorage.fname = JSON.stringify(user);
     
 }
+setInterval(localS,500)
 function retrive() {
     // to get in in the L.S in json
     const user = JSON.parse(localStorage.user);
