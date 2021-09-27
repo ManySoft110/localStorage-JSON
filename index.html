@@ -30,12 +30,12 @@
 function localS() {
 
     // const id = document.getElementById('id').value;
-    const id = new Date();
+    const id = Date.now();
+    //const id = Math.floor(Math.random() * 100000);
     const fname = document.getElementById('fname').value;
     const lname = document.getElementById('lname').value;
     const ph = document.getElementById('phone').value;
     
-
     const user = {
         fname:fname,
         lname:lname,
