@@ -28,22 +28,24 @@
 <!--<script src="script.js"></script>-->
 <script>
 function localS() {
+    //const id = uuid;
     const f = document.getElementById('fname').value;
     const l = document.getElementById('lname').value;
     const ph = document.getElementById('phone').value;
-    const moustafa={
+
+    const user = {
         f:f,
         l:l,
         ph:ph
     };
     // to save in in the L.S in json
-    localStorage.lec = JSON.stringify(moustafa);
+    localStorage.lec = JSON.stringify(user);
     // to get in in the L.S in json
     const m = JSON.parse(localStorage.lec);
     console.log( m );
     console.log( m.f );
-    console.log( moustafa );
-    console.log( moustafa.f );
+    console.log( user );
+    console.log( user.f );
 }
 </script>
 </body>
