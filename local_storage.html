@@ -1,0 +1,50 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="styles.css">-->
+        <!--<link rel="shortcut icon" href="favicon.png" type="image/png">-->
+        <title>Title</title>
+    </head>
+    <body>
+        <div class="mb-3" style="max-width: fit-content; margin-left: auto;margin-right: auto; margin-top: 7rem;">
+            <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name"><br><br>
+            <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name"><br><br>
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="phone"><br><br>
+            <div class="d-grid gap-2">
+                <button type="button" name="" id="" onclick="localS();" class="btn btn-success">Save</button>
+            </div>
+        </div>
+        <div id="display"></div>
+    
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<!--<script src="script.js"></script>-->
+<script>
+function localS() {
+    const f = document.getElementById('fname').value;
+    const l = document.getElementById('lname').value;
+    const ph = document.getElementById('phone').value;
+    const moustafa={
+        f:f,
+        l:l,
+        ph:ph
+    };
+    // to save in in the L.S in json
+    localStorage.lec = JSON.stringify(moustafa);
+    // to get in in the L.S in json
+    const m = JSON.parse(localStorage.lec);
+    console.log( m );
+    console.log( m.f );
+    console.log( moustafa );
+    console.log( moustafa.f );
+}
+</script>
+</body>
+</html>
