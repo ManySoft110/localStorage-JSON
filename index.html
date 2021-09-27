@@ -28,15 +28,12 @@
 <!--<script src="script.js"></script>-->
 <script>
 function localS() {
-
     // const id = document.getElementById('id').value;
     // const id = Math.floor(Math.random() * 100000);
     const id = Date.now();
-    
     const fname = document.getElementById('fname').value;
     const lname = document.getElementById('lname').value;
     const ph = document.getElementById('phone').value;
-    
     const user = {
         fname:fname,
         lname:lname,
@@ -44,13 +41,12 @@ function localS() {
     };
     window.localStorage.setItem(id, JSON.stringify(user));
     // to save in in the L.S in json
-    // localStorage.fname = JSON.stringify(user);
-    
+    // localStorage.id = JSON.stringify(user);
 }
-setInterval(localS,500)
+//setInterval(localS,500);
 function retrive() {
     // to get in in the L.S in json
-    const user = JSON.parse(localStorage.user);
+    const user = JSON.parse(localStorage.id);
     console.log( user );
     // console.log( user.fname );
     // console.log( user.lname );
