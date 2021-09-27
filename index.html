@@ -29,13 +29,13 @@
 <script>
 function localS() {
     //const id = uuid;
-    const f = document.getElementById('fname').value;
-    const l = document.getElementById('lname').value;
+    const fname = document.getElementById('fname').value;
+    const lname = document.getElementById('lname').value;
     const ph = document.getElementById('phone').value;
 
     const user = {
-        f:f,
-        l:l,
+        fname:fname,
+        lname:lname,
         ph:ph
     };
     // to save in in the L.S in json
@@ -43,9 +43,9 @@ function localS() {
     // to get in in the L.S in json
     const m = JSON.parse(localStorage.lec);
     console.log( m );
-    console.log( m.f );
+    console.log( m.fname );
     console.log( user );
-    console.log( user.f );
+    console.log( user.fname );
 }
 </script>
 </body>
