@@ -16,6 +16,10 @@
             <input type="text" class="form-control" name="phone" id="phone" placeholder="phone"><br><br>
             <div class="d-grid gap-2">
                 <button type="button" name="" id="" onclick="localS();" class="btn btn-success">Save</button>
+            </div><br>
+
+            <div class="d-grid gap-2">
+                <button type="button" name="" id="" onclick="retrive();" class="btn btn-success">Fetch</button>
             </div>
         </div>
         <div id="display"></div>
@@ -41,11 +45,19 @@ function localS() {
     // to save in in the L.S in json
     localStorage.lec = JSON.stringify(user);
     // to get in in the L.S in json
-    const m = JSON.parse(localStorage.lec);
+  /*  const m = JSON.parse(localStorage.lec);
     console.log( m );
     console.log( m.fname );
     console.log( user );
+    console.log( user.fname );*/
+}
+function retrive() {
+    // to get in in the L.S in json
+    const user = JSON.parse(localStorage.lec);
+
+    console.log( user );
     console.log( user.fname );
+    console.log( user.lname );
 }
 </script>
 </body>
